@@ -21,7 +21,7 @@ steps:
 - name: Setup Python # Установка python окружения для выполнения задания
 with:
 cache: pip
-python-version: '3.3'
+python-version: '3.10.5'
 - name: Install Dependencies # Установка зависимостей для Jupyter
 run: pip install -r requirements.txt
 - name: Exeute Notebook # Выполнение тетрадки Jupyter
