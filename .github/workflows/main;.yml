@@ -33,7 +33,7 @@ jobs:
         run: pip install -r requirements.txt
       
       - name: Exeute Notebook
-        run: jupyter nbconvert --to html --template HomePractice1.ipynb
+        run: jupyter nbconvert HomePractice1.ipynb --to html
         
       - name: Upload a Build Artifact
         uses: actions/upload-artifact@v3.1.0
