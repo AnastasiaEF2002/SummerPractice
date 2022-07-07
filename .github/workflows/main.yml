@@ -22,7 +22,7 @@ uses: actions/checkout@v3
 uses: actions/setup-python@v4.0.0
 with:
 cache: pip
-python-version: '3.7'
+python-version: '3'
 - name: Install Dependencies # Установка зависимостей для Jupyter
 run: pip install -r requirements.txt
 - name: Exeute Notebook # Выполнение тетрадки Jupyter
@@ -31,4 +31,4 @@ run: jupyter-nbconvert --execute plot_iris_exercise.ipynb --to html
 uses: actions/upload-artifact@v3.1.0
 with:
 name: Artifact
-path: plot_iris_exercise.html
+path: HomePractice1.html
