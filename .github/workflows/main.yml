@@ -13,6 +13,15 @@ jobs:
 build:
 # На каком образе будет запускаться наш сценарий: по умолчанию стоит Ubuntu, оставляем.
 runs-on: ubuntu-latest
+ deploy:
+      runs-on: ubuntu-latest
+      steps:
+        - uses: actions/checkout@v3
+        - name: GitHub Action for Checkout  
+        - run: |
+            heroku login
+          env:
+            CI: true
 # Шаги представляют собой последовательность задач, которые будут выполняться как часть задания
 steps:
 - name: Checkout # Извлечение репозитория в $GITHUB_WORKSPACE, чтобы задание могло получить к нему доступ
